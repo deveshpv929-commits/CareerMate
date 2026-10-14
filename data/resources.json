@@ -1,0 +1,45 @@
+
+[
+  {
+    "id": "python_basics",
+    "title": "Python Tutorial",
+    "skill": "Python",
+    "level": "beginner",
+    "url": "https://docs.python.org/3/tutorial/"
+  },
+  {
+    "id": "sql_basics",
+    "title": "SQL Tutorial",
+    "skill": "SQL",
+    "level": "beginner",
+    "url": "https://www.w3schools.com/sql/"
+  },
+  {
+    "id": "react_basics",
+    "title": "React Learn",
+    "skill": "React",
+    "level": "beginner",
+    "url": "https://react.dev/learn"
+  },
+  {
+    "id": "ml_basics",
+    "title": "Scikit-learn User Guide",
+    "skill": "Machine Learning",
+    "level": "intermediate",
+    "url": "https://scikit-learn.org/stable/user_guide.html"
+  },
+  {
+    "id": "networking_basics",
+    "title": "Cisco Networking Basics",
+    "skill": "Networking",
+    "level": "beginner",
+    "url": "https://skillsforall.com/"
+  },
+  {
+    "id": "testing_basics",
+    "title": "ISTQB Resources",
+    "skill": "Testing Fundamentals",
+    "level": "beginner",
+    "url": "https://www.istqb.org/"
+  }
+]

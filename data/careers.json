@@ -1,0 +1,75 @@
+
+[
+  {
+    "id": "python_developer",
+    "title": "Python Developer",
+    "description": "Develops applications, APIs, automation tools, and backend services.",
+    "skills": {
+      "Python": 5,
+      "SQL": 4,
+      "Git": 3,
+      "REST APIs": 4,
+      "Problem Solving": 4
+    }
+  },
+  {
+    "id": "frontend_developer",
+    "title": "Frontend Developer",
+    "description": "Builds interactive and responsive web interfaces.",
+    "skills": {
+      "HTML": 4,
+      "CSS": 4,
+      "JavaScript": 5,
+      "React": 4,
+      "Git": 3
+    }
+  },
+  {
+    "id": "data_analyst",
+    "title": "Data Analyst",
+    "description": "Analyzes data and communicates insights using queries and visualizations.",
+    "skills": {
+      "Python": 4,
+      "SQL": 5,
+      "Statistics": 4,
+      "Data Visualization": 4,
+      "Excel": 3
+    }
+  },
+  {
+    "id": "ml_engineer",
+    "title": "Machine Learning Engineer",
+    "description": "Builds, evaluates, and deploys machine learning systems.",
+    "skills": {
+      "Python": 5,
+      "Statistics": 4,
+      "Machine Learning": 5,
+      "SQL": 3,
+      "Git": 3
+    }
+  },
+  {
+    "id": "cybersecurity_analyst",
+    "title": "Cybersecurity Analyst",
+    "description": "Investigates security events and helps protect systems and networks.",
+    "skills": {
+      "Networking": 5,
+      "Linux": 4,
+      "Security Fundamentals": 5,
+      "Python": 3,
+      "Log Analysis": 4
+    }
+  },
+  {
+    "id": "qa_engineer",
+    "title": "QA Engineer",
+    "description": "Tests software to identify defects and improve reliability.",
+    "skills": {
+      "Testing Fundamentals": 5,
+      "Python": 3,
+      "SQL": 3,
+      "API Testing": 4,
+      "Git": 3
+    }
+  }
+]
