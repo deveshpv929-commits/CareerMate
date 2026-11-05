@@ -11,3 +11,28 @@ __pycache__/
 *.py[cod]
 
 # Local development filesgit status --short --untracked-files=all
+
+# Python
+venv/
+venv_broken/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Node.js
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# IDE and logs
+.vscode/
+.idea/
+*.log
+
+# Local backup archive
+backend.zip
