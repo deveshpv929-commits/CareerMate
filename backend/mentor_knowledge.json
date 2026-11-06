@@ -1,0 +1,1161 @@
+{
+  "knowledge_base": [
+    {
+      "id": 1,
+      "category": "Cybersecurity",
+      "keywords": [
+        "cybersecurity",
+        "information security",
+        "security"
+      ],
+      "question": "What is cybersecurity?",
+      "answer": "Cybersecurity is the practice of protecting computers, networks, applications, and data from unauthorized access, attacks, and damage. It includes network security, application security, cloud security, ethical hacking, and incident response.",
+      "related_topics": [
+        "Networking",
+        "Linux",
+        "Ethical Hacking"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Networking",
+      "keywords": [
+        "networking",
+        "network",
+        "tcp",
+        "udp",
+        "ip address"
+      ],
+      "question": "What is computer networking?",
+      "answer": "Computer networking connects multiple devices so they can communicate and share information. Important concepts include IP addresses, DNS, TCP, UDP, HTTP, HTTPS, routers, switches, and firewalls.",
+      "related_topics": [
+        "TCP/IP",
+        "DNS",
+        "Network Security"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Linux",
+      "keywords": [
+        "linux",
+        "commands",
+        "terminal"
+      ],
+      "question": "What is Linux?",
+      "answer": "Linux is an open-source operating system widely used in servers, cybersecurity, cloud computing, and ethical hacking. Important commands include pwd, ls, cd, mkdir, touch, cp, mv, rm, cat, grep, chmod, sudo, and whoami. Learn file permissions, users, processes, and shell scripting.",
+      "related_topics": [
+        "Linux Commands",
+        "Bash Scripting",
+        "Operating Systems"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Python",
+      "keywords": [
+        "python",
+        "programming",
+        "coding",
+        "python basics"
+      ],
+      "question": "How do I learn Python?",
+      "answer": "Start with variables, data types, operators, conditional statements, loops, functions, lists, tuples, dictionaries, sets, file handling, exception handling, and object-oriented programming. Then practise with small projects and automation scripts.",
+      "related_topics": [
+        "Programming",
+        "Automation",
+        "Data Structures"
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Ethical Hacking",
+      "keywords": [
+        "ethical hacking",
+        "hacking",
+        "penetration testing",
+        "pentesting"
+      ],
+      "question": "What is ethical hacking?",
+      "answer": "Ethical hacking is the authorized process of testing computer systems, applications, and networks to identify security weaknesses before malicious attackers exploit them. Learn networking, Linux, Python, web security, vulnerability assessment, and responsible disclosure. Practise only in authorized labs.",
+      "related_topics": [
+        "Kali Linux",
+        "Penetration Testing",
+        "OWASP"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Web Security",
+      "keywords": [
+        "web security",
+        "owasp",
+        "sql injection",
+        "xss",
+        "csrf"
+      ],
+      "question": "What is web application security?",
+      "answer": "Web application security protects websites and web applications against attacks. Important topics include SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), authentication, authorization, input validation, and secure session management. Study the OWASP Top 10.",
+      "related_topics": [
+        "OWASP Top 10",
+        "HTTP",
+        "Secure Coding"
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Log Analysis",
+      "keywords": [
+        "log analysis",
+        "logs",
+        "siem",
+        "monitoring",
+        "security logs"
+      ],
+      "question": "What is log analysis?",
+      "answer": "Log analysis involves examining system, application, and network logs to identify unusual activities, errors, and potential security incidents. Learn Linux authentication logs, Windows Event Logs, timestamps, failed login detection, and SIEM tools such as Splunk and Wazuh.",
+      "related_topics": [
+        "SIEM",
+        "Incident Response",
+        "Threat Detection"
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Career Guidance",
+      "keywords": [
+        "cybersecurity analyst",
+        "career",
+        "job",
+        "career path",
+        "roadmap"
+      ],
+      "question": "How can I become a cybersecurity analyst?",
+      "answer": "To become a cybersecurity analyst, build a foundation in networking, Linux, Windows, Python, security fundamentals, and log analysis. Practise using Wireshark, Nmap, and Wazuh. Build projects, document your work, prepare for interviews, and apply for internships and entry-level SOC analyst roles.",
+      "related_topics": [
+        "SOC Analyst",
+        "Networking",
+        "SIEM"
+      ]
+    },
+    {
+      "id": 9,
+      "category": "Database",
+      "keywords": [
+        "database",
+        "sql",
+        "mysql",
+        "database management"
+      ],
+      "question": "What is SQL?",
+      "answer": "SQL stands for Structured Query Language. It is used to store, retrieve, update, and manage relational database information. Learn SELECT, INSERT, UPDATE, DELETE, JOIN, GROUP BY, ORDER BY, primary keys, foreign keys, and database normalization.",
+      "related_topics": [
+        "MySQL",
+        "Database Design",
+        "Backend Development"
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Machine Learning",
+      "keywords": [
+        "machine learning",
+        "ml",
+        "artificial intelligence",
+        "ai"
+      ],
+      "question": "What is machine learning?",
+      "answer": "Machine learning is a branch of artificial intelligence that enables computers to learn patterns from data and make predictions. Its main categories include supervised learning, unsupervised learning, and reinforcement learning. Learn Python, statistics, NumPy, Pandas, and Scikit-learn.",
+      "related_topics": [
+        "Artificial Intelligence",
+        "Deep Learning",
+        "Python"
+      ]
+    },
+    {
+      "id": 11,
+      "category": "Projects",
+      "keywords": [
+        "project",
+        "final year project",
+        "portfolio",
+        "cybersecurity project"
+      ],
+      "question": "Which cybersecurity projects should I build?",
+      "answer": "Beginner-friendly cybersecurity projects include a password strength checker, file integrity monitoring tool, network traffic analyzer, log monitoring dashboard, phishing URL detector, and basic vulnerability scanner. Document the objectives, technologies, implementation, screenshots, and results in GitHub.",
+      "related_topics": [
+        "Python",
+        "Networking",
+        "GitHub"
+      ]
+    },
+    {
+      "id": 12,
+      "category": "Interview Preparation",
+      "keywords": [
+        "interview",
+        "interview questions",
+        "placement",
+        "hr round",
+        "technical interview"
+      ],
+      "question": "How should I prepare for technical interviews?",
+      "answer": "Prepare core programming concepts, data structures, SQL, operating systems, networking, and your project explanations. Practise common technical questions, problem-solving exercises, and HR questions. Be prepared to explain your own contribution to every project on your resume.",
+      "related_topics": [
+        "Aptitude",
+        "Communication Skills",
+        "Resume"
+      ]
+    },
+    {
+      "id": 13,
+      "category": "Resume",
+      "keywords": [
+        "resume",
+        "cv",
+        "ats",
+        "resume building",
+        "job application"
+      ],
+      "question": "How can I improve my resume?",
+      "answer": "Create a clear, one-page resume as a fresher. Include education, technical skills, projects, internships, certifications, and achievements. Use relevant keywords from job descriptions, measurable project outcomes, and simple formatting. Avoid false claims and unnecessary personal information.",
+      "related_topics": [
+        "ATS",
+        "LinkedIn",
+        "Job Applications"
+      ]
+    },
+    {
+      "id": 14,
+      "category": "Internships",
+      "keywords": [
+        "internship",
+        "internships",
+        "fresher",
+        "apprenticeship",
+        "experience"
+      ],
+      "question": "How can freshers find internships?",
+      "answer": "Freshers can find internships through company career pages, LinkedIn, college placement cells, and recognized internship platforms. Prepare a resume, build practical projects, practise interviews, and verify the organization before sharing personal information or paying any fees.",
+      "related_topics": [
+        "Resume",
+        "LinkedIn",
+        "Interview Preparation"
+      ]
+    },
+    {
+      "id": 15,
+      "category": "Learning Strategy",
+      "keywords": [
+        "study plan",
+        "learning plan",
+        "7 day plan",
+        "schedule",
+        "daily plan"
+      ],
+      "question": "How should I create a learning plan?",
+      "answer": "Create a learning plan by selecting one target career, identifying required skills, assessing your current proficiency, and prioritizing skill gaps. Break learning into daily tasks with realistic time estimates. Include theory, practical exercises, revision, and progress tracking.",
+      "related_topics": [
+        "Roadmap",
+        "Time Management",
+        "Skill Assessment"
+      ]
+    },
+    {
+      "id": 16,
+      "category": "Communication Skills",
+      "keywords": [
+        "communication",
+        "english",
+        "soft skills",
+        "group discussion"
+      ],
+      "question": "How can I improve communication skills?",
+      "answer": "Improve communication by practising English conversations, reading technical articles, explaining concepts aloud, participating in group discussions, and preparing short self-introductions. Focus on clarity, confidence, listening, and structured answers.",
+      "related_topics": [
+        "Interview Preparation",
+        "Soft Skills",
+        "Presentation Skills"
+      ]
+    },
+    {
+      "id": 17,
+      "category": "Linux",
+      "keywords": [
+        "linux file permissions",
+        "file permission",
+        "chmod",
+        "read write execute"
+      ],
+      "question": "What are Linux file permissions?",
+      "answer": "Linux permissions control who can read, write, or execute a file or directory. The three classes are owner, group, and others. The symbols are r (read), w (write), and x (execute). Use ls -l to inspect permissions and chmod to change them. For directories, execute permission allows traversal.",
+      "related_topics": [
+        "chmod",
+        "chown",
+        "Linux commands"
+      ]
+    },
+    {
+      "id": 18,
+      "category": "Linux",
+      "keywords": [
+        "chmod 755",
+        "chmod numeric",
+        "permission numbers"
+      ],
+      "question": "How does chmod 755 work?",
+      "answer": "In numeric permissions, read=4, write=2, and execute=1. The three digits represent owner, group, and others. chmod 755 gives the owner read, write, and execute, while group and others receive read and execute. chmod 644 gives the owner read and write, and everyone else read-only access.",
+      "related_topics": [
+        "Linux file permissions",
+        "chmod"
+      ]
+    },
+    {
+      "id": 19,
+      "category": "Linux",
+      "keywords": [
+        "chown",
+        "change owner",
+        "file ownership"
+      ],
+      "question": "What does chown do in Linux?",
+      "answer": "The chown command changes the owner and optionally the group of a file or directory. Example: sudo chown username:groupname filename. Check ownership with ls -l and be careful when changing ownership of system files.",
+      "related_topics": [
+        "Linux permissions",
+        "sudo"
+      ]
+    },
+    {
+      "id": 20,
+      "category": "Linux",
+      "keywords": [
+        "sudo",
+        "root privileges",
+        "superuser"
+      ],
+      "question": "What is sudo in Linux?",
+      "answer": "sudo allows an authorized user to run a command with elevated privileges according to system policy. It is commonly used for administration. Use it only when necessary and inspect commands before running them.",
+      "related_topics": [
+        "Linux users",
+        "root account"
+      ]
+    },
+    {
+      "id": 21,
+      "category": "Linux",
+      "keywords": [
+        "linux processes",
+        "ps",
+        "top",
+        "kill"
+      ],
+      "question": "How do I view Linux processes?",
+      "answer": "A process is a running instance of a program. Use ps to list processes, top to monitor activity, and kill with a process ID to send a signal. Identify a process before stopping it; prefer normal termination over forceful termination.",
+      "related_topics": [
+        "Linux commands",
+        "system monitoring"
+      ]
+    },
+    {
+      "id": 22,
+      "category": "Linux",
+      "keywords": [
+        "grep",
+        "find",
+        "search text files"
+      ],
+      "question": "How do I search for text and files in Linux?",
+      "answer": "Use grep to search file contents, such as grep 'error' app.log. Use find to locate files, such as find . -name '*.log'. Check paths carefully before running commands on important directories.",
+      "related_topics": [
+        "Linux commands",
+        "log analysis"
+      ]
+    },
+    {
+      "id": 23,
+      "category": "Networking",
+      "keywords": [
+        "dns",
+        "domain name system",
+        "name resolution"
+      ],
+      "question": "What is DNS?",
+      "answer": "The Domain Name System translates domain names into records used by network clients, commonly IP addresses. Learn A, AAAA, CNAME, MX, and TXT records, resolvers, caching, and how DNS problems affect access to services.",
+      "related_topics": [
+        "Networking",
+        "HTTP",
+        "DNS security"
+      ]
+    },
+    {
+      "id": 24,
+      "category": "Networking",
+      "keywords": [
+        "dhcp",
+        "dynamic host configuration protocol",
+        "ip assignment"
+      ],
+      "question": "What is DHCP?",
+      "answer": "Dynamic Host Configuration Protocol automatically provides network settings to clients, commonly an IP address, subnet mask, default gateway, and DNS server. Learn the lease process and how incorrect assignments can cause connectivity problems.",
+      "related_topics": [
+        "IP address",
+        "networking"
+      ]
+    },
+    {
+      "id": 25,
+      "category": "Networking",
+      "keywords": [
+        "tcp",
+        "transmission control protocol",
+        "connection oriented"
+      ],
+      "question": "What is TCP?",
+      "answer": "Transmission Control Protocol provides a reliable, ordered byte stream between applications. It uses acknowledgements, sequence numbers, retransmission, and flow control. It is commonly used by web, email, and file-transfer applications.",
+      "related_topics": [
+        "UDP",
+        "TCP/IP",
+        "ports"
+      ]
+    },
+    {
+      "id": 26,
+      "category": "Networking",
+      "keywords": [
+        "udp",
+        "user datagram protocol",
+        "connectionless"
+      ],
+      "question": "What is UDP?",
+      "answer": "User Datagram Protocol is a connectionless transport protocol with low overhead. It does not provide TCP-style delivery guarantees or ordering. DNS, real-time media, and some games may use UDP where low latency is useful.",
+      "related_topics": [
+        "TCP",
+        "DNS",
+        "ports"
+      ]
+    },
+    {
+      "id": 27,
+      "category": "Networking",
+      "keywords": [
+        "firewall",
+        "packet filtering",
+        "network firewall"
+      ],
+      "question": "What is a firewall?",
+      "answer": "A firewall enforces traffic rules between systems or networks. It may filter by addresses, ports, protocols, connection state, or application data. It reduces exposure but does not replace patching, secure configuration, endpoint protection, or monitoring.",
+      "related_topics": [
+        "Network security",
+        "IDS",
+        "IPS"
+      ]
+    },
+    {
+      "id": 28,
+      "category": "Networking",
+      "keywords": [
+        "subnetting",
+        "subnet mask",
+        "cidr",
+        "network prefix"
+      ],
+      "question": "What is subnetting?",
+      "answer": "Subnetting divides an IP network into smaller logical networks. A subnet mask or CIDR prefix identifies the network portion of an address. Practise calculating IPv4 network addresses, broadcast addresses, and usable host ranges.",
+      "related_topics": [
+        "IP address",
+        "CIDR"
+      ]
+    },
+    {
+      "id": 29,
+      "category": "Networking",
+      "keywords": [
+        "http",
+        "https",
+        "tls",
+        "web protocol"
+      ],
+      "question": "What is the difference between HTTP and HTTPS?",
+      "answer": "HTTP is an application protocol for communication between clients and web servers. HTTPS is HTTP protected by TLS, which helps provide encryption, integrity, and server authentication when certificates are correctly validated. HTTPS does not guarantee that a website is free of vulnerabilities.",
+      "related_topics": [
+        "TLS",
+        "web security",
+        "certificates"
+      ]
+    },
+    {
+      "id": 30,
+      "category": "Web Security",
+      "keywords": [
+        "sql injection",
+        "sqli",
+        "database injection"
+      ],
+      "question": "What is SQL injection?",
+      "answer": "SQL injection occurs when untrusted input is incorporated into a database query unsafely, allowing the query's intended meaning to be altered. Prevent it with parameterized queries or prepared statements, appropriate input validation, and least-privilege database accounts. Practise only in authorized labs.",
+      "related_topics": [
+        "SQL",
+        "OWASP",
+        "secure coding"
+      ]
+    },
+    {
+      "id": 31,
+      "category": "Web Security",
+      "keywords": [
+        "xss",
+        "cross site scripting",
+        "script injection"
+      ],
+      "question": "What is cross-site scripting (XSS)?",
+      "answer": "Cross-site scripting occurs when attacker-controlled content is interpreted as executable script in another user's browser. Common types include stored, reflected, and DOM-based XSS. Defences include context-aware output encoding, safe templating, careful HTML handling, and Content Security Policy as an additional layer.",
+      "related_topics": [
+        "OWASP",
+        "web security",
+        "input validation"
+      ]
+    },
+    {
+      "id": 32,
+      "category": "Web Security",
+      "keywords": [
+        "csrf",
+        "cross site request forgery",
+        "forged request"
+      ],
+      "question": "What is CSRF?",
+      "answer": "Cross-site request forgery tricks a browser into sending an unwanted authenticated request to a site where the user is signed in. Defences include anti-CSRF tokens, suitable SameSite cookie settings, checking request context, and re-authentication for sensitive actions. CORS alone is not a CSRF defence.",
+      "related_topics": [
+        "Web security",
+        "cookies",
+        "authentication"
+      ]
+    },
+    {
+      "id": 33,
+      "category": "Web Security",
+      "keywords": [
+        "authentication",
+        "identity verification",
+        "login"
+      ],
+      "question": "What is authentication?",
+      "answer": "Authentication verifies the identity of a user, device, or service. Methods include passwords, passkeys, one-time codes, security keys, and biometrics. Strong systems protect credentials, rate-limit login attempts, and provide secure account recovery.",
+      "related_topics": [
+        "Authorization",
+        "MFA"
+      ]
+    },
+    {
+      "id": 34,
+      "category": "Web Security",
+      "keywords": [
+        "authorization",
+        "access control",
+        "permissions"
+      ],
+      "question": "What is authorization?",
+      "answer": "Authorization determines what an authenticated identity may access or do. It can use roles, permissions, or policy rules. Enforce authorization on the server for every protected operation and test that users cannot access another user's records by changing an identifier.",
+      "related_topics": [
+        "Authentication",
+        "RBAC"
+      ]
+    },
+    {
+      "id": 35,
+      "category": "Web Security",
+      "keywords": [
+        "owasp top 10",
+        "owasp",
+        "web application risks"
+      ],
+      "question": "What is the OWASP Top 10?",
+      "answer": "The OWASP Top 10 is an awareness resource describing important categories of web application security risks. It helps learners study areas such as access control, cryptographic failures, injection, insecure design, and security misconfiguration. Check the official OWASP project for the current edition.",
+      "related_topics": [
+        "Web security",
+        "SQL injection"
+      ]
+    },
+    {
+      "id": 36,
+      "category": "Log Analysis",
+      "keywords": [
+        "windows event logs",
+        "event viewer",
+        "windows logs"
+      ],
+      "question": "What are Windows Event Logs?",
+      "answer": "Windows Event Logs record events from the operating system, applications, and services. Event Viewer can inspect Application, Security, and System logs. Analysts review timestamps, event IDs, account names, and surrounding activity to investigate errors or suspicious behaviour.",
+      "related_topics": [
+        "SIEM",
+        "incident response"
+      ]
+    },
+    {
+      "id": 37,
+      "category": "Log Analysis",
+      "keywords": [
+        "linux authentication log",
+        "auth.log",
+        "secure log",
+        "failed login"
+      ],
+      "question": "Where can I find Linux authentication logs?",
+      "answer": "On many Debian-based systems, authentication events may be recorded in /var/log/auth.log. On many Red Hat-based systems, related events may appear in /var/log/secure. Systemd systems may expose logs through journalctl. Locations vary by distribution and configuration.",
+      "related_topics": [
+        "Linux",
+        "log analysis",
+        "failed login detection"
+      ]
+    },
+    {
+      "id": 38,
+      "category": "Log Analysis",
+      "keywords": [
+        "siem",
+        "security information event management"
+      ],
+      "question": "What is a SIEM?",
+      "answer": "A Security Information and Event Management system collects and analyses security logs and events from multiple sources. It can normalize data, correlate activity, generate alerts, and support investigations. Detection quality depends on data coverage, rule tuning, and analyst review.",
+      "related_topics": [
+        "SOC analyst",
+        "Wazuh",
+        "Splunk"
+      ]
+    },
+    {
+      "id": 39,
+      "category": "Log Analysis",
+      "keywords": [
+        "wazuh",
+        "open source siem",
+        "host intrusion detection"
+      ],
+      "question": "What is Wazuh?",
+      "answer": "Wazuh is an open-source security platform used for monitoring, threat detection, vulnerability detection, configuration assessment, and log analysis. It commonly uses agents to collect endpoint data for central analysis. Practise in a lab using systems you control.",
+      "related_topics": [
+        "SIEM",
+        "SOC analyst"
+      ]
+    },
+    {
+      "id": 40,
+      "category": "Log Analysis",
+      "keywords": [
+        "wireshark",
+        "packet capture",
+        "protocol analyzer"
+      ],
+      "question": "What is Wireshark?",
+      "answer": "Wireshark captures or reads packet data and displays protocol details. Analysts use it to troubleshoot connectivity and inspect network behaviour. Learn capture filters, display filters, TCP handshakes, DNS queries, and HTTP or TLS metadata. Capture traffic only where you have permission.",
+      "related_topics": [
+        "Networking",
+        "packet analysis"
+      ]
+    },
+    {
+      "id": 41,
+      "category": "Networking",
+      "keywords": [
+        "nmap",
+        "network scanner",
+        "port scanning"
+      ],
+      "question": "What is Nmap?",
+      "answer": "Nmap is a network discovery and security auditing tool. It can identify hosts, open ports, and service information within an authorized scope. Learn basic discovery and scanning in a private lab. Obtain permission before scanning systems you do not own or administer.",
+      "related_topics": [
+        "Port scanning",
+        "ethical hacking"
+      ]
+    },
+    {
+      "id": 42,
+      "category": "Cybersecurity",
+      "keywords": [
+        "cia triad",
+        "confidentiality integrity availability"
+      ],
+      "question": "What is the CIA triad?",
+      "answer": "The CIA triad describes three information-security goals: confidentiality prevents unauthorized disclosure, integrity protects against unauthorized or improper changes, and availability keeps systems and data accessible when needed. Security controls often support one or more of these goals.",
+      "related_topics": [
+        "Security fundamentals",
+        "risk management"
+      ]
+    },
+    {
+      "id": 43,
+      "category": "Cybersecurity",
+      "keywords": [
+        "encryption",
+        "cryptography",
+        "ciphertext"
+      ],
+      "question": "What is encryption?",
+      "answer": "Encryption transforms plaintext into ciphertext using an algorithm and key so that only parties with the appropriate key can recover the information. Symmetric encryption uses a shared secret key; asymmetric cryptography uses a public and private key pair. Secure key management is essential.",
+      "related_topics": [
+        "Cryptography",
+        "TLS",
+        "data protection"
+      ]
+    },
+    {
+      "id": 44,
+      "category": "Cybersecurity",
+      "keywords": [
+        "hashing",
+        "hash function",
+        "sha256",
+        "password hash"
+      ],
+      "question": "What is hashing in cybersecurity?",
+      "answer": "A cryptographic hash function maps data to a fixed-length digest. Hashes can help verify integrity. Passwords should be stored with purpose-built password-hashing algorithms such as Argon2id, bcrypt, or scrypt using suitable parameters, rather than plain fast hashes alone.",
+      "related_topics": [
+        "Cryptography",
+        "password security"
+      ]
+    },
+    {
+      "id": 45,
+      "category": "Cybersecurity",
+      "keywords": [
+        "mfa",
+        "multi factor authentication",
+        "two factor authentication",
+        "2fa"
+      ],
+      "question": "What is multi-factor authentication?",
+      "answer": "Multi-factor authentication requires evidence from at least two different factor categories: something you know, have, or are. It can reduce the impact of a stolen password. Prefer phishing-resistant methods such as passkeys or security keys where available, and protect recovery methods too.",
+      "related_topics": [
+        "Authentication",
+        "passkeys"
+      ]
+    },
+    {
+      "id": 46,
+      "category": "Cybersecurity",
+      "keywords": [
+        "phishing",
+        "phishing email",
+        "social engineering"
+      ],
+      "question": "What is phishing?",
+      "answer": "Phishing is social engineering in which an attacker impersonates a trusted person or organization to trick someone into revealing information, opening a harmful attachment, or visiting a fraudulent site. Check senders and destinations carefully and report suspicious messages through approved channels.",
+      "related_topics": [
+        "Social engineering",
+        "email security"
+      ]
+    },
+    {
+      "id": 47,
+      "category": "Cybersecurity",
+      "keywords": [
+        "malware",
+        "virus",
+        "trojan",
+        "ransomware"
+      ],
+      "question": "What is malware?",
+      "answer": "Malware is software designed to perform harmful or unauthorized actions. Types include viruses, worms, trojans, spyware, and ransomware. Defences include updates, endpoint protection, least privilege, backups, secure configuration, and user awareness.",
+      "related_topics": [
+        "Ransomware",
+        "endpoint security"
+      ]
+    },
+    {
+      "id": 48,
+      "category": "Cybersecurity",
+      "keywords": [
+        "vulnerability",
+        "security weakness",
+        "patching"
+      ],
+      "question": "What is a vulnerability?",
+      "answer": "A vulnerability is a weakness in software, hardware, configuration, or process that could be exploited and affect confidentiality, integrity, or availability. Vulnerability management includes identifying assets, assessing severity, prioritizing fixes, applying patches or mitigations, and verifying remediation.",
+      "related_topics": [
+        "Risk management",
+        "patching"
+      ]
+    },
+    {
+      "id": 49,
+      "category": "Cybersecurity",
+      "keywords": [
+        "incident response",
+        "security incident",
+        "containment eradication recovery"
+      ],
+      "question": "What is incident response?",
+      "answer": "Incident response is the organized process for handling suspected or confirmed security incidents. Common phases include preparation, detection and analysis, containment, eradication, recovery, and lessons learned. Follow organizational procedures, preserve evidence, document actions, and escalate appropriately.",
+      "related_topics": [
+        "SOC analyst",
+        "log analysis"
+      ]
+    },
+    {
+      "id": 50,
+      "category": "Career Guidance",
+      "keywords": [
+        "soc analyst",
+        "security operations center",
+        "soc tier 1"
+      ],
+      "question": "What does a SOC analyst do?",
+      "answer": "A Security Operations Center analyst monitors alerts, reviews logs, investigates suspicious activity, documents findings, and escalates incidents according to procedures. Entry-level skills include networking, Windows and Linux basics, SIEM queries, incident triage, and clear written communication.",
+      "related_topics": [
+        "SIEM",
+        "incident response"
+      ]
+    },
+    {
+      "id": 51,
+      "category": "Career Guidance",
+      "keywords": [
+        "soc analyst tools",
+        "cybersecurity tools",
+        "security analyst tools"
+      ],
+      "question": "Which tools should a beginner SOC analyst learn?",
+      "answer": "A beginner can learn Wireshark for packet analysis, Wazuh or a training SIEM for event monitoring, Nmap for authorized network discovery, and Windows Event Viewer or Linux journalctl for logs. Understand what each tool shows and practise in a small lab.",
+      "related_topics": [
+        "SOC analyst",
+        "Wireshark",
+        "Wazuh"
+      ]
+    },
+    {
+      "id": 52,
+      "category": "Cloud Security",
+      "keywords": [
+        "cloud security",
+        "cloud computing security",
+        "shared responsibility"
+      ],
+      "question": "What is cloud security?",
+      "answer": "Cloud security protects cloud-hosted data, identities, applications, and infrastructure. Important areas include identity and access management, secure configuration, encryption, logging, network controls, backups, and vulnerability management. Understand the shared-responsibility model of the cloud service being used.",
+      "related_topics": [
+        "AWS",
+        "Azure",
+        "IAM"
+      ]
+    },
+    {
+      "id": 53,
+      "category": "Cloud Security",
+      "keywords": [
+        "iam",
+        "identity access management",
+        "cloud permissions"
+      ],
+      "question": "What is Identity and Access Management (IAM)?",
+      "answer": "Identity and Access Management controls identities and their access to resources. Common elements include users, groups, roles, policies, authentication, and authorization. Apply least privilege, use multi-factor authentication, review permissions regularly, and avoid long-lived credentials when safer alternatives are available.",
+      "related_topics": [
+        "Cloud security",
+        "authentication"
+      ]
+    },
+    {
+      "id": 54,
+      "category": "Database",
+      "keywords": [
+        "mysql",
+        "mysql database",
+        "database server"
+      ],
+      "question": "What is MySQL?",
+      "answer": "MySQL is a relational database management system that stores data in tables and supports SQL queries. Learn table design, data types, primary and foreign keys, joins, indexes, transactions, backups, and user privileges. Use parameterized queries in applications to reduce SQL injection risk.",
+      "related_topics": [
+        "SQL",
+        "database design"
+      ]
+    },
+    {
+      "id": 55,
+      "category": "Database",
+      "keywords": [
+        "sql join",
+        "inner join",
+        "left join",
+        "database join"
+      ],
+      "question": "What is a JOIN in SQL?",
+      "answer": "A SQL JOIN combines rows from tables using a related column or join condition. INNER JOIN returns matching rows; LEFT JOIN keeps every row from the left table and adds matching right-table data where available. Practise with small related tables and watch for duplicate rows in one-to-many relationships.",
+      "related_topics": [
+        "SQL",
+        "MySQL"
+      ]
+    },
+    {
+      "id": 56,
+      "category": "Database",
+      "keywords": [
+        "primary key",
+        "database primary key",
+        "unique identifier"
+      ],
+      "question": "What is a primary key in SQL?",
+      "answer": "A primary key is a column or set of columns that uniquely identifies each row in a table. Its values must be unique and cannot be NULL. A table has one primary-key constraint, which may contain multiple columns.",
+      "related_topics": [
+        "Foreign key",
+        "database design"
+      ]
+    },
+    {
+      "id": 57,
+      "category": "Database",
+      "keywords": [
+        "foreign key",
+        "referential integrity",
+        "database relationship"
+      ],
+      "question": "What is a foreign key in SQL?",
+      "answer": "A foreign key is a column or group of columns whose values reference a candidate key, commonly a primary key, in another table. It helps enforce referential integrity. Learn how ON DELETE and ON UPDATE actions affect related records.",
+      "related_topics": [
+        "Primary key",
+        "database design"
+      ]
+    },
+    {
+      "id": 58,
+      "category": "Python",
+      "keywords": [
+        "python list",
+        "list data structure",
+        "list methods"
+      ],
+      "question": "What is a list in Python?",
+      "answer": "A Python list is an ordered, mutable collection that can contain values of different types. Create one with square brackets, access items by index, and use methods such as append, extend, insert, remove, and sort.",
+      "related_topics": [
+        "Python basics",
+        "tuples"
+      ]
+    },
+    {
+      "id": 59,
+      "category": "Python",
+      "keywords": [
+        "python dictionary",
+        "dict",
+        "key value"
+      ],
+      "question": "What is a dictionary in Python?",
+      "answer": "A Python dictionary stores key-value pairs. Keys are unique and must be hashable. Use braces to create one, access values by key, and use methods such as get, keys, values, and items. Dictionaries are useful for structured lookups.",
+      "related_topics": [
+        "Python basics",
+        "data structures"
+      ]
+    },
+    {
+      "id": 60,
+      "category": "Python",
+      "keywords": [
+        "python function",
+        "def",
+        "function parameters"
+      ],
+      "question": "What is a function in Python?",
+      "answer": "A function is a reusable block of code defined with def. It can accept parameters and return a result. Functions help organize programs into smaller testable parts. Learn positional and keyword arguments, default values, scope, and docstrings.",
+      "related_topics": [
+        "Python basics",
+        "programming"
+      ]
+    },
+    {
+      "id": 61,
+      "category": "Python",
+      "keywords": [
+        "python exception handling",
+        "try except",
+        "error handling"
+      ],
+      "question": "How does exception handling work in Python?",
+      "answer": "Exception handling lets a program respond to runtime errors. Use try for code that may raise an exception, except for specific errors you can handle, else when no exception occurs, and finally for cleanup. Catch specific exception types rather than hiding every error.",
+      "related_topics": [
+        "Python",
+        "debugging"
+      ]
+    },
+    {
+      "id": 62,
+      "category": "Programming",
+      "keywords": [
+        "git",
+        "version control",
+        "github repository"
+      ],
+      "question": "What is Git?",
+      "answer": "Git is a distributed version-control system that records changes to files over time. Common commands include git init, git status, git add, git commit, git log, git branch, git pull, and git push. Never commit passwords, API keys, or secret environment files.",
+      "related_topics": [
+        "GitHub",
+        "software development"
+      ]
+    },
+    {
+      "id": 63,
+      "category": "Programming",
+      "keywords": [
+        "github",
+        "code hosting",
+        "repository hosting"
+      ],
+      "question": "What is GitHub?",
+      "answer": "GitHub is a platform for hosting Git repositories and collaborating on software projects. Developers use it for source control, pull requests, issues, documentation, and portfolios. Keep repositories organized, write a useful README, and never publish credentials or private data.",
+      "related_topics": [
+        "Git",
+        "README",
+        "portfolio"
+      ]
+    },
+    {
+      "id": 64,
+      "category": "Security Fundamentals",
+      "keywords": [
+        "least privilege",
+        "principle of least privilege",
+        "minimum permissions"
+      ],
+      "question": "What is the principle of least privilege?",
+      "answer": "Least privilege means giving each user, process, or service only the permissions needed to perform its tasks, for only as long as needed. It limits damage from mistakes or compromised accounts. Review access regularly and remove permissions that are no longer required.",
+      "related_topics": [
+        "Access control",
+        "IAM"
+      ]
+    },
+    {
+      "id": 65,
+      "category": "Security Fundamentals",
+      "keywords": [
+        "patch management",
+        "software updates",
+        "security patches"
+      ],
+      "question": "What is patch management?",
+      "answer": "Patch management identifies, tests, prioritizes, deploys, and verifies software updates that fix bugs or security vulnerabilities. Maintain an asset inventory, prioritize exposed and critical systems, plan rollback, and confirm updates installed successfully.",
+      "related_topics": [
+        "Vulnerability management",
+        "system administration"
+      ]
+    },
+    {
+      "id": 66,
+      "category": "Security Fundamentals",
+      "keywords": [
+        "backup",
+        "data backup",
+        "recovery"
+      ],
+      "question": "Why are backups important for cybersecurity?",
+      "answer": "Backups help restore data and services after deletion, hardware failure, ransomware, or other incidents. Keep protected copies separated from everyday systems, restrict access, and test restoration regularly. Define what is backed up, how often, retention periods, and recovery objectives.",
+      "related_topics": [
+        "Ransomware",
+        "disaster recovery"
+      ]
+    },
+    {
+      "id": 67,
+      "category": "Security Fundamentals",
+      "keywords": [
+        "ids",
+        "intrusion detection system",
+        "network intrusion detection"
+      ],
+      "question": "What is an intrusion detection system (IDS)?",
+      "answer": "An Intrusion Detection System monitors network traffic or host activity for signs of suspicious behaviour and generates alerts. Signature-based detection looks for known patterns; anomaly-based detection looks for deviations from expected behaviour. An IDS detects and alerts; it may not block activity.",
+      "related_topics": [
+        "IPS",
+        "SIEM"
+      ]
+    },
+    {
+      "id": 68,
+      "category": "Security Fundamentals",
+      "keywords": [
+        "ips",
+        "intrusion prevention system",
+        "blocking malicious traffic"
+      ],
+      "question": "What is an intrusion prevention system (IPS)?",
+      "answer": "An Intrusion Prevention System monitors activity and can take configured actions to block traffic identified as malicious. False positives can interrupt legitimate activity, so rules need careful tuning and monitoring.",
+      "related_topics": [
+        "IDS",
+        "firewall"
+      ]
+    },
+    {
+      "id": 69,
+      "category": "Security Fundamentals",
+      "keywords": [
+        "ssh",
+        "secure shell",
+        "remote login"
+      ],
+      "question": "What is SSH?",
+      "answer": "Secure Shell is a protocol for securely accessing and administering remote systems over an encrypted connection. It commonly uses TCP port 22. Learn host-key verification, public-key authentication, passphrase protection, and safe key management.",
+      "related_topics": [
+        "Linux",
+        "cryptography"
+      ]
+    },
+    {
+      "id": 70,
+      "category": "Security Fundamentals",
+      "keywords": [
+        "vpn",
+        "virtual private network",
+        "encrypted tunnel"
+      ],
+      "question": "What is a VPN?",
+      "answer": "A Virtual Private Network creates a protected connection across an underlying network, often using encryption and authentication. VPNs can provide secure remote access or connect networks. A VPN does not make a user completely anonymous or protect against every threat.",
+      "related_topics": [
+        "Network security",
+        "encryption"
+      ]
+    },
+    {
+      "id": 71,
+      "category": "Career Guidance",
+      "keywords": [
+        "cybersecurity portfolio",
+        "github portfolio",
+        "security projects resume"
+      ],
+      "question": "How can I build a cybersecurity portfolio?",
+      "answer": "Build safe, documented projects such as a log analyser, file-integrity checker, packet-analysis report, or security configuration checklist. Explain the problem, authorized test environment, tools, steps, results, and limitations. Remove personal data, credentials, and sensitive network details before publishing.",
+      "related_topics": [
+        "Projects",
+        "GitHub",
+        "resume"
+      ]
+    },
+    {
+      "id": 72,
+      "category": "Career Guidance",
+      "keywords": [
+        "entry level cybersecurity roles",
+        "cybersecurity job roles",
+        "junior security jobs"
+      ],
+      "question": "What entry-level jobs are available in cybersecurity?",
+      "answer": "Possible entry-level paths include SOC analyst, security operations trainee, junior security analyst, IT support with security responsibilities, vulnerability-management assistant, and security testing intern. Titles and requirements vary, so compare actual job descriptions and build the skills they request.",
+      "related_topics": [
+        "SOC analyst",
+        "internships"
+      ]
+    },
+    {
+      "id": 73,
+      "category": "Learning Strategy",
+      "keywords": [
+        "active learning",
+        "practice learning",
+        "technical study method"
+      ],
+      "question": "How should I practise a technical topic?",
+      "answer": "Use a repeatable cycle: learn one concept, explain it in your own words, complete a small hands-on exercise, check the result, and revisit it later. Keep notes of errors and questions. For security topics, use intentionally vulnerable labs or systems you are authorized to test.",
+      "related_topics": [
+        "Study plan",
+        "projects",
+        "revision"
+      ]
+    }
+  ]
+}

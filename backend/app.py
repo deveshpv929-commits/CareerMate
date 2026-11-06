@@ -13,6 +13,7 @@ import smtplib
 from email.message import EmailMessage
 from datetime import datetime, timedelta
 from urllib.parse import quote
+from mentor_engine import generate_hybrid_answer
 
 load_dotenv()
 
@@ -1519,8 +1520,6 @@ def update_learning_task(task_id):
 # CareerMate AI Mentor Chat
 # =========================
 
-from google import genai
-from google.genai import types
 import time
 
 
@@ -1668,12 +1667,7 @@ def mentor_chat():
             "error": "Message is too long. Please keep it under 4000 characters."
         }), 400
 
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        app.logger.error("GEMINI_API_KEY is missing from the backend environment.")
-        return jsonify({"error": "The AI Mentor is not configured yet."}), 500
-
-    # Load context only for the currently authenticated student.
+    # Load only this authenticated student's saved profile and roadmap.
     student_context = {
         "student_name": None,
         "career_interest": None,
@@ -1683,70 +1677,45 @@ def mentor_chat():
     }
     connection = None
     cursor = None
-
     try:
         connection = get_db_connection()
         cursor = connection.cursor(dictionary=True)
-
         cursor.execute(
-            """
-            SELECT name, career_interest
-            FROM students
-            WHERE id = %s
-            """,
+            "SELECT name, career_interest FROM students WHERE id = %s",
             (student_id,),
         )
         student = cursor.fetchone()
-
         if student:
             student_context["student_name"] = student.get("name")
             student_context["career_interest"] = student.get("career_interest")
 
         cursor.execute(
-            """
-            SELECT s.name AS skill, ss.proficiency_level
-            FROM student_skills ss
-            JOIN skills s ON s.id = ss.skill_id
-            WHERE ss.student_id = %s
-            ORDER BY s.name
-            """,
+            """SELECT s.name AS skill, ss.proficiency_level
+               FROM student_skills ss
+               JOIN skills s ON s.id = ss.skill_id
+               WHERE ss.student_id = %s ORDER BY s.name""",
             (student_id,),
         )
         student_context["skills"] = cursor.fetchall()
 
         cursor.execute(
-            """
-            SELECT
-                sp.id AS plan_id,
-                c.title AS career,
-                c.description
-            FROM study_plans sp
-            JOIN careers c ON c.id = sp.career_id
-            WHERE sp.student_id = %s
-            ORDER BY sp.created_at DESC, sp.id DESC
-            LIMIT 1
-            """,
+            """SELECT sp.id AS plan_id, c.title AS career, c.description
+               FROM study_plans sp
+               JOIN careers c ON c.id = sp.career_id
+               WHERE sp.student_id = %s
+               ORDER BY sp.created_at DESC, sp.id DESC LIMIT 1""",
             (student_id,),
         )
-        plan = cursor.fetchone()
-        student_context["plan"] = plan
-
-        if plan:
+        student_context["plan"] = cursor.fetchone()
+        if student_context["plan"]:
             cursor.execute(
-                """
-                SELECT
-                    st.task_title,
-                    st.completed,
-                    st.estimated_minutes,
-                    s.name AS skill
-                FROM study_tasks st
-                JOIN skills s ON s.id = st.skill_id
-                WHERE st.plan_id = %s
-                ORDER BY st.id
-                """,
-                (plan["plan_id"],),
+                """SELECT st.task_title, st.completed, st.estimated_minutes,
+                          s.name AS skill
+                   FROM study_tasks st
+                   JOIN skills s ON s.id = st.skill_id
+                   WHERE st.plan_id = %s ORDER BY st.id""",
+                (student_context["plan"]["plan_id"],),
             )
-            tasks = cursor.fetchall()
             student_context["tasks"] = [
                 {
                     "task_title": task["task_title"],
@@ -1754,11 +1723,10 @@ def mentor_chat():
                     "completed": bool(task["completed"]),
                     "estimated_minutes": task["estimated_minutes"],
                 }
-                for task in tasks
+                for task in cursor.fetchall()
             ]
-
     except mysql.connector.Error:
-        # Keep the chat usable if context retrieval fails, but record the cause.
+        # Retrieval still works if the profile query fails; log the database issue.
         app.logger.exception(
             "Unable to load saved student context for AI Mentor (student_id=%s).",
             student_id,
@@ -1769,19 +1737,15 @@ def mentor_chat():
         if connection is not None and connection.is_connected():
             connection.close()
 
-    # Summarize the saved roadmap so the model can use real progress, not guess.
     tasks = student_context["tasks"]
     completed_tasks = [task for task in tasks if task["completed"]]
     pending_tasks = [task for task in tasks if not task["completed"]]
-
     context_for_prompt = {
+        "student_id": student_id,
         "student_name": student_context["student_name"] or "Not saved",
         "career_interest": student_context["career_interest"] or "Not saved",
-        # Limit prompt context so older/larger profiles do not unnecessarily slow generation.
         "current_skills": student_context["skills"][:20],
-        "roadmap_career": (
-            student_context["plan"]["career"] if student_context["plan"] else None
-        ),
+        "roadmap_career": student_context["plan"]["career"] if student_context["plan"] else None,
         "roadmap_exists": bool(student_context["plan"]),
         "total_roadmap_tasks": len(tasks),
         "completed_task_count": len(completed_tasks),
@@ -1790,86 +1754,12 @@ def mentor_chat():
         "pending_tasks": pending_tasks[:15],
     }
 
+    # Retrieval-first hybrid answer. Gemini is no longer required.
     try:
-        client = genai.Client(
-            api_key=api_key,
-            http_options=types.HttpOptions(
-                timeout=120000,
-                retry_options=types.HttpRetryOptions(attempts=1),
-            ),
+        context_for_prompt["student_id"] = student_id
+        answer, mentor_mode, retrieval_confidence, cache_hit = generate_hybrid_answer(
+            message, context_for_prompt
         )
-
-        prompt = (
-            "You are CareerMate, a friendly AI learning and career mentor "
-            "for college students. Give practical, beginner-friendly advice "
-            "about careers, technical skills, projects, internships, and interviews.\n\n"
-            "Use the student's SAVED CareerMate context below when relevant. "
-            "Do not invent skills, completed tasks, career interests, or progress. "
-            "If a field says Not saved, or no roadmap exists, be honest about that "
-            "and ask only for the missing information that is genuinely needed. "
-            "When roadmap tasks are available, clearly distinguish completed tasks "
-            "from pending tasks and recommend a sensible next pending task. "
-            "Use the saved proficiency levels as the student's current skill data. "
-            "Do not claim to guarantee jobs or placements.\n\n"
-            "For comparisons or tables, return a valid GitHub-Flavored Markdown "
-            "table with each row on a separate line and a header separator row.\n\n"
-            "SAVED STUDENT CONTEXT (JSON):\n"
-            + json.dumps(context_for_prompt, ensure_ascii=False, default=str)
-            + "\n\nStudent's question:\n"
-            + message
-        )
-
-        response = None
-        # Keep the AI Mentor responsive during Gemini outages: one request only.
-        # The HTTP timeout is configured on the client above.
-        max_attempts = 1
-        retryable_statuses = {429, 500, 502, 503, 504}
-        generation_started_at = time.monotonic()
-
-        for attempt in range(max_attempts):
-            try:
-                response = client.models.generate_content(
-                    model="gemini-3.8-flash",
-                    contents=prompt,
-                    config=types.GenerateContentConfig(
-                        max_output_tokens=1024,
-                    ),
-                )
-                break
-            except Exception as error:
-                status_code = getattr(error, "code", None)
-                if not isinstance(status_code, int):
-                    status_code = getattr(error, "status_code", None)
-
-                if (
-                    status_code not in retryable_statuses
-                    or attempt == max_attempts - 1
-                ):
-                    raise
-
-                wait_seconds = 1
-                app.logger.warning(
-                    "Gemini request returned status %s. Retrying in %s seconds "
-                    "(attempt %s of %s).",
-                    status_code,
-                    wait_seconds,
-                    attempt + 1,
-                    max_attempts,
-                )
-                time.sleep(wait_seconds)
-
-        answer = response.text if response else None
-        app.logger.info(
-            "Gemini generation completed in %.2f seconds (student_id=%s).",
-            time.monotonic() - generation_started_at,
-            student_id,
-        )
-
-        if not answer or not answer.strip():
-            app.logger.warning("Gemini returned an empty response.")
-            return jsonify({
-                "error": "The AI Mentor could not generate a response. Please try again."
-            }), 502
 
         # Save this question/answer pair to the authenticated student's conversation.
         chat_connection = None
@@ -1971,6 +1861,9 @@ def mentor_chat():
             "conversation_id": conversation_id,
             "saved_plan_id": saved_plan_id,
             "plan_saved": saved_plan_id is not None,
+            "mentor_mode": mentor_mode,
+            "retrieval_confidence": round(float(retrieval_confidence), 3),
+            "cache_hit": cache_hit,
         }), 200
 
     except Exception as error:

@@ -1,0 +1,132 @@
+{
+  "knowledge_base": [
+    {
+      "id": 1,
+      "category": "Cybersecurity",
+      "keywords": ["cybersecurity", "information security", "security"],
+      "question": "What is cybersecurity?",
+      "answer": "Cybersecurity is the practice of protecting computers, networks, applications, and data from unauthorized access, attacks, and damage. It includes network security, application security, cloud security, ethical hacking, and incident response.",
+      "related_topics": ["Networking", "Linux", "Ethical Hacking"]
+    },
+    {
+      "id": 2,
+      "category": "Networking",
+      "keywords": ["networking", "network", "tcp", "udp", "ip address"],
+      "question": "What is computer networking?",
+      "answer": "Computer networking connects multiple devices so they can communicate and share information. Important concepts include IP addresses, DNS, TCP, UDP, HTTP, HTTPS, routers, switches, and firewalls.",
+      "related_topics": ["TCP/IP", "DNS", "Network Security"]
+    },
+    {
+      "id": 3,
+      "category": "Linux",
+      "keywords": ["linux", "commands", "terminal", "permissions", "chmod"],
+      "question": "What is Linux?",
+      "answer": "Linux is an open-source operating system widely used in servers, cybersecurity, cloud computing, and ethical hacking. Important commands include pwd, ls, cd, mkdir, touch, cp, mv, rm, cat, grep, chmod, sudo, and whoami. Learn file permissions, users, processes, and shell scripting.",
+      "related_topics": ["Linux Commands", "Bash Scripting", "Operating Systems"]
+    },
+    {
+      "id": 4,
+      "category": "Python",
+      "keywords": ["python", "programming", "coding", "python basics"],
+      "question": "How do I learn Python?",
+      "answer": "Start Python with variables, data types, operators, conditional statements, loops, functions, lists, tuples, dictionaries, sets, file handling, exception handling, and object-oriented programming. Then practise with small projects and automation scripts.",
+      "related_topics": ["Programming", "Automation", "Data Structures"]
+    },
+    {
+      "id": 5,
+      "category": "Ethical Hacking",
+      "keywords": ["ethical hacking", "hacking", "penetration testing", "pentesting"],
+      "question": "What is ethical hacking?",
+      "answer": "Ethical hacking is the authorized process of testing computer systems, applications, and networks to identify security weaknesses before malicious attackers exploit them. Learn networking, Linux, Python, web security, vulnerability assessment, and responsible disclosure. Practise only in authorized labs.",
+      "related_topics": ["Kali Linux", "Penetration Testing", "OWASP"]
+    },
+    {
+      "id": 6,
+      "category": "Web Security",
+      "keywords": ["web security", "owasp", "sql injection", "xss", "csrf"],
+      "question": "What is web application security?",
+      "answer": "Web application security protects websites and web applications against attacks. Important topics include SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), authentication, authorization, input validation, and secure session management. Study the OWASP Top 10.",
+      "related_topics": ["OWASP Top 10", "HTTP", "Secure Coding"]
+    },
+    {
+      "id": 7,
+      "category": "Log Analysis",
+      "keywords": ["log analysis", "logs", "siem", "monitoring", "security logs"],
+      "question": "What is log analysis?",
+      "answer": "Log analysis involves examining system, application, and network logs to identify unusual activities, errors, and potential security incidents. Learn Linux authentication logs, Windows Event Logs, timestamps, failed login detection, and SIEM tools such as Splunk and Wazuh.",
+      "related_topics": ["SIEM", "Incident Response", "Threat Detection"]
+    },
+    {
+      "id": 8,
+      "category": "Career Guidance",
+      "keywords": ["cybersecurity analyst", "career", "job", "career path", "roadmap"],
+      "question": "How can I become a cybersecurity analyst?",
+      "answer": "To become a cybersecurity analyst, build a foundation in networking, Linux, Windows, Python, security fundamentals, and log analysis. Practise using Wireshark, Nmap, and Wazuh. Build projects, document your work, prepare for interviews, and apply for internships and entry-level SOC analyst roles.",
+      "related_topics": ["SOC Analyst", "Networking", "SIEM"]
+    },
+    {
+      "id": 9,
+      "category": "Database",
+      "keywords": ["database", "sql", "mysql", "database management"],
+      "question": "What is SQL?",
+      "answer": "SQL stands for Structured Query Language. It is used to store, retrieve, update, and manage relational database information. Learn SELECT, INSERT, UPDATE, DELETE, JOIN, GROUP BY, ORDER BY, primary keys, foreign keys, and database normalization.",
+      "related_topics": ["MySQL", "Database Design", "Backend Development"]
+    },
+    {
+      "id": 10,
+      "category": "Machine Learning",
+      "keywords": ["machine learning", "ml", "artificial intelligence", "ai"],
+      "question": "What is machine learning?",
+      "answer": "Machine learning is a branch of artificial intelligence that enables computers to learn patterns from data and make predictions. Its main categories include supervised learning, unsupervised learning, and reinforcement learning. Learn Python, statistics, NumPy, Pandas, and Scikit-learn.",
+      "related_topics": ["Artificial Intelligence", "Deep Learning", "Python"]
+    },
+    {
+      "id": 11,
+      "category": "Projects",
+      "keywords": ["project", "final year project", "portfolio", "cybersecurity project"],
+      "question": "Which cybersecurity projects should I build?",
+      "answer": "Beginner-friendly cybersecurity projects include a password strength checker, file integrity monitoring tool, network traffic analyzer, log monitoring dashboard, phishing URL detector, and basic vulnerability scanner. Document the objectives, technologies, implementation, screenshots, and results in GitHub.",
+      "related_topics": ["Python", "Networking", "GitHub"]
+    },
+    {
+      "id": 12,
+      "category": "Interview Preparation",
+      "keywords": ["interview", "interview questions", "placement", "hr round", "technical interview"],
+      "question": "How should I prepare for technical interviews?",
+      "answer": "Prepare core programming concepts, data structures, SQL, operating systems, networking, and your project explanations. Practise common technical questions, problem-solving exercises, and HR questions. Be prepared to explain your own contribution to every project on your resume.",
+      "related_topics": ["Aptitude", "Communication Skills", "Resume"]
+    },
+    {
+      "id": 13,
+      "category": "Resume",
+      "keywords": ["resume", "cv", "ats", "resume building", "job application"],
+      "question": "How can I improve my resume?",
+      "answer": "Create a clear, one-page resume as a fresher. Include education, technical skills, projects, internships, certifications, and achievements. Use relevant keywords from job descriptions, measurable project outcomes, and simple formatting. Avoid false claims and unnecessary personal information.",
+      "related_topics": ["ATS", "LinkedIn", "Job Applications"]
+    },
+    {
+      "id": 14,
+      "category": "Internships",
+      "keywords": ["internship", "internships", "fresher", "apprenticeship", "experience"],
+      "question": "How can freshers find internships?",
+      "answer": "Freshers can find internships through company career pages, LinkedIn, college placement cells, and recognized internship platforms. Prepare a resume, build practical projects, practise interviews, and verify the organization before sharing personal information or paying any fees.",
+      "related_topics": ["Resume", "LinkedIn", "Interview Preparation"]
+    },
+    {
+      "id": 15,
+      "category": "Learning Strategy",
+      "keywords": ["study plan", "learning plan", "7 day plan", "schedule", "daily plan"],
+      "question": "How should I create a learning plan?",
+      "answer": "Create a learning plan by selecting one target career, identifying required skills, assessing your current proficiency, and prioritizing skill gaps. Break learning into daily tasks with realistic time estimates. Include theory, practical exercises, revision, and progress tracking.",
+      "related_topics": ["Roadmap", "Time Management", "Skill Assessment"]
+    },
+    {
+      "id": 16,
+      "category": "Communication Skills",
+      "keywords": ["communication", "english", "soft skills", "group discussion"],
+      "question": "How can I improve communication skills?",
+      "answer": "Improve communication by practising English conversations, reading technical articles, explaining concepts aloud, participating in group discussions, and preparing short self-introductions. Focus on clarity, confidence, listening, and structured answers.",
+      "related_topics": ["Interview Preparation", "Soft Skills", "Presentation Skills"]
+    }
+  ]
+}
