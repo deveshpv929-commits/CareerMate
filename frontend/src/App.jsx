@@ -1073,7 +1073,7 @@ setStarted(true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [student?.id, activeTab])
 
-  // Send a question to the authenticated Flask/Gemini mentor endpoint.
+  // Send a question to the authenticated Flask retrieval-first AI Mentor endpoint.
 
   async function sendMentorMessage(event) {
 
