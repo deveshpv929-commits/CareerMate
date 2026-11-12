@@ -22,12 +22,25 @@
       "keywords": [
         "networking",
         "network",
-        "tcp",
-        "udp",
-        "ip address"
+        "computer networking",
+        "network communication",
+        "ip address",
+        "pan",
+        "personal area network",
+        "lan",
+        "local area network",
+        "man",
+        "metropolitan area network",
+        "wan",
+        "wide area network",
+        "types of networking",
+        "networking types",
+        "network advantages",
+        "network disadvantages",
+        "network examples"
       ],
       "question": "What is computer networking?",
-      "answer": "Computer networking connects multiple devices so they can communicate and share information. Important concepts include IP addresses, DNS, TCP, UDP, HTTP, HTTPS, routers, switches, and firewalls.",
+      "answer": "Computer networking connects two or more devices so they can communicate and share information. The devices may be computers, phones, printers, servers, or other network-enabled equipment. They communicate through wired or wireless connections. Common networking concepts include IP addresses, DNS, TCP, UDP, HTTP, HTTPS, routers, switches, and firewalls.\n\n### Types of computer networks\n\n1. **PAN (Personal Area Network):** A small network around one person, usually over a short distance. Example: connecting a phone to wireless earbuds or a smartwatch using Bluetooth.\n\n2. **LAN (Local Area Network):** Connects devices within a limited area such as a home, classroom, office, or computer laboratory. Example: computers and printers connected to the same college lab network.\n\n3. **MAN (Metropolitan Area Network):** Connects networks across a town or city. Example: a network linking branches of an organisation across the same city.\n\n4. **WAN (Wide Area Network):** Connects networks over large geographical areas, such as different states or countries. Example: a company connecting its offices in Hyderabad, Mumbai, and Delhi. The Internet is the largest widely used example of a WAN.\n\n### Real-world examples\n\n- **At home:** A Wi-Fi router connects phones, laptops, and smart TVs to the home network.\n- **At college:** A LAN connects lab computers, faculty systems, and shared printers.\n- **Across a city:** A MAN can connect an organisation's offices in different parts of the city.\n- **Across countries:** A WAN can connect a company's offices in different countries.\n\n### Advantages of computer networking\n\n- **Resource sharing:** Users can share printers, storage, software, and internet connections.\n- **Communication:** People can exchange messages and files quickly.\n- **Centralised management:** Organisations can manage users, devices, and data from central systems.\n- **Collaboration:** Teams can access shared files and work together.\n- **Cost efficiency:** Sharing equipment and services can reduce costs.\n\n### Disadvantages of computer networking\n\n- **Security risks:** Attackers may exploit weak passwords, unpatched devices, or misconfigurations.\n- **Malware can spread:** Infected devices may affect other devices on the network.\n- **Setup and maintenance costs:** Networks need equipment, configuration, and ongoing maintenance.\n- **Dependence on network availability:** A network or internet outage can interrupt access to shared services.\n- **Privacy concerns:** Poor access controls can expose sensitive information.\n\n### Networking in simple words\n\nA computer network is like a group of people connected by a communication system. Instead of passing messages by hand, connected devices send information to one another. For example, when your phone uses your home Wi-Fi to open a website, it is communicating through a network.",
       "related_topics": [
         "TCP/IP",
         "DNS",
@@ -53,6 +66,7 @@
     {
       "id": 4,
       "category": "Python",
+      "title": "Python Learning Roadmap",
       "keywords": [
         "python",
         "programming",
@@ -827,7 +841,7 @@
       "category": "Cloud Security",
       "keywords": [
         "cloud security",
-        "cloud computing security",
+        "cloud infrastructure security",
         "shared responsibility"
       ],
       "question": "What is cloud security?",
@@ -1116,7 +1130,7 @@
       "keywords": [
         "cybersecurity portfolio",
         "github portfolio",
-        "security projects resume"
+        "security projects documentation"
       ],
       "question": "How can I build a cybersecurity portfolio?",
       "answer": "Build safe, documented projects such as a log analyser, file-integrity checker, packet-analysis report, or security configuration checklist. Explain the problem, authorized test environment, tools, steps, results, and limitations. Remove personal data, credentials, and sensitive network details before publishing.",
@@ -1147,7 +1161,21 @@
       "keywords": [
         "active learning",
         "practice learning",
-        "technical study method"
+        "technical study method",
+        "programming",
+        "coding",
+        "programming skills",
+        "improve programming",
+        "coding practice",
+        "practice programming",
+        "learn programming",
+        "technical skills",
+        "hands-on practice",
+        "get better at coding",
+        "getting better at coding",
+        "improve coding",
+        "become better at programming",
+        "develop coding skills"
       ],
       "question": "How should I practise a technical topic?",
       "answer": "Use a repeatable cycle: learn one concept, explain it in your own words, complete a small hands-on exercise, check the result, and revisit it later. Keep notes of errors and questions. For security topics, use intentionally vulnerable labs or systems you are authorized to test.",
@@ -1155,6 +1183,419 @@
         "Study plan",
         "projects",
         "revision"
+      ]
+    },
+    {
+      "id": 74,
+      "category": "Technology",
+      "keywords": [
+        "cloud computing",
+        "cloud services",
+        "cloud infrastructure",
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "AWS",
+        "Azure"
+      ],
+      "question": "What is cloud computing?",
+      "answer": "Cloud computing is the delivery of computing services such as servers, storage, databases, networking, and software over the internet. It has three major service models:\n\n1. IaaS (Infrastructure as a Service): Provides virtual machines, servers, storage, and networking. Users manage their operating systems and applications, while the provider manages the physical infrastructure. Example: AWS EC2 and Azure Virtual Machines.\n\n2. PaaS (Platform as a Service): Provides a ready-to-use environment for developers to build, test, and deploy applications without managing the underlying servers and operating systems. Example: Google App Engine and Azure App Service.\n\n3. SaaS (Software as a Service): Provides ready-to-use software over the internet, usually through a browser or application. Users do not need to manage the underlying infrastructure. Examples: Gmail, Microsoft 365, and Salesforce.\n\nIn simple terms: IaaS provides infrastructure, PaaS provides a development platform, and SaaS provides ready-to-use software.",
+      "related_topics": [
+        "Cloud Security",
+        "AWS",
+        "Microsoft Azure",
+        "Google Cloud"
+      ]
+    },
+    {
+      "id": 75,
+      "category": "Technology",
+      "keywords": [
+        "artificial intelligence",
+        "AI",
+        "machine intelligence",
+        "intelligent systems",
+        "generative AI",
+        "AI applications"
+      ],
+      "question": "What is artificial intelligence (AI)?",
+      "answer": "Artificial Intelligence (AI) is a field of computer science that focuses on building systems capable of performing tasks that normally require human intelligence. These tasks include learning, reasoning, problem-solving, understanding language, and recognizing images. Common applications include chatbots, recommendation systems, speech recognition, and autonomous systems. Machine Learning is a subfield of AI that enables systems to learn patterns from data.",
+      "related_topics": [
+        "Machine Learning",
+        "Deep Learning",
+        "Natural Language Processing",
+        "Generative AI"
+      ]
+    },
+    {
+      "id": 76,
+      "category": "Technology",
+      "keywords": [
+        "Java",
+        "Java programming",
+        "object oriented programming",
+        "OOP",
+        "JVM",
+        "JDK",
+        "Java applications"
+      ],
+      "question": "What is Java programming?",
+      "answer": "Java is a high-level, class-based programming language widely used to develop web applications, enterprise software, Android-related applications, and backend systems. It supports object-oriented programming concepts such as classes, objects, inheritance, encapsulation, polymorphism, and abstraction. Java programs are compiled into bytecode that runs on the Java Virtual Machine (JVM), making Java applications portable across supported platforms.",
+      "related_topics": [
+        "Python",
+        "Object-Oriented Programming",
+        "Spring Boot",
+        "Backend Development"
+      ]
+    },
+    {
+      "id": 77,
+      "category": "Programming",
+      "keywords": [
+        "Python",
+        "Python programming",
+        "Python language",
+        "Python syntax",
+        "Python applications",
+        "Python data types"
+      ],
+      "question": "What is Python programming?",
+      "answer": "Python is a high-level, interpreted, general-purpose programming language known for its simple and readable syntax. It supports procedural, object-oriented, and functional programming. Python is widely used in web development, automation, artificial intelligence, machine learning, data science, and cybersecurity. Important concepts include variables, data types, loops, functions, classes, modules, and exception handling.",
+      "related_topics": [
+        "Object-Oriented Programming",
+        "Data Structures",
+        "Artificial Intelligence",
+        "Cybersecurity Automation"
+      ]
+    },
+    {
+      "id": 78,
+      "category": "Programming",
+      "keywords": [
+        "JavaScript",
+        "JS",
+        "web programming",
+        "client-side scripting",
+        "DOM",
+        "JavaScript functions",
+        "JavaScript syntax"
+      ],
+      "question": "What is JavaScript?",
+      "answer": "JavaScript is a high-level programming language mainly used to make websites interactive and dynamic. It runs in web browsers and can also run on servers using environments such as Node.js. JavaScript supports variables, functions, objects, arrays, events, asynchronous programming, and DOM manipulation. It is commonly used with HTML and CSS to build modern web applications.",
+      "related_topics": [
+        "HTML",
+        "CSS",
+        "React",
+        "Node.js"
+      ]
+    },
+    {
+      "id": 79,
+      "category": "Database Management",
+      "keywords": [
+        "DBMS",
+        "database management system",
+        "database software",
+        "data management",
+        "relational database",
+        "database operations"
+      ],
+      "question": "What is DBMS?",
+      "answer": "A Database Management System (DBMS) is software used to create, store, organize, retrieve, update, and manage data in databases. It provides controlled access to data, security, data consistency, and backup and recovery features. Common DBMS examples include MySQL, PostgreSQL, Oracle Database, and Microsoft SQL Server. SQL is commonly used to communicate with relational database systems.",
+      "related_topics": [
+        "SQL",
+        "MySQL",
+        "Database Normalization",
+        "Database Security"
+      ]
+    },
+    {
+      "id": 80,
+      "category": "Programming",
+      "keywords": [
+        "Java vs JavaScript",
+        "Java and JavaScript difference",
+        "difference between Java and JavaScript",
+        "JavaScript comparison",
+        "Java programming language comparison"
+      ],
+      "question": "What is the difference between Java and JavaScript?",
+      "answer": "Java and JavaScript are two different programming languages. Java is a class-based, object-oriented language commonly used for enterprise applications, backend systems, and Android development. JavaScript is widely used to create interactive websites and web applications and also supports server-side development through Node.js. Java programs typically run on the Java Virtual Machine (JVM), while JavaScript runs in browser engines or JavaScript runtimes. Despite their similar names, their syntax, execution environments, and typical use cases are different.",
+      "related_topics": [
+        "Java Programming",
+        "JavaScript",
+        "Object-Oriented Programming",
+        "Web Development"
+      ]
+    },
+    {
+      "id": 81,
+      "category": "Database Management",
+      "keywords": [
+        "DBMS vs SQL",
+        "difference between DBMS and SQL",
+        "SQL vs database management system",
+        "DBMS and SQL comparison",
+        "database software and query language"
+      ],
+      "question": "What is the difference between DBMS and SQL?",
+      "answer": "DBMS stands for Database Management System. It is software used to create, store, organize, retrieve, and manage database information. SQL stands for Structured Query Language. It is a language used to communicate with relational databases and perform operations such as retrieving, inserting, updating, and deleting data. In simple terms, DBMS is the software that manages the database, while SQL is the language used to work with the data. MySQL is an example of a DBMS, while SELECT and INSERT are examples of SQL commands.",
+      "related_topics": [
+        "SQL",
+        "MySQL",
+        "Database Management Systems",
+        "Database Operations"
+      ]
+    },
+    {
+      "id": 82,
+      "category": "Computer Science",
+      "keywords": [
+        "Operating System",
+        "OS",
+        "process management",
+        "memory management",
+        "CPU scheduling",
+        "file system",
+        "Linux",
+        "Windows"
+      ],
+      "question": "What is an Operating System?",
+      "answer": "An Operating System (OS) is system software that manages computer hardware and software resources and provides an interface between users, applications, and hardware. Its main responsibilities include process management, memory management, file management, device management, security, and CPU scheduling. Common operating systems include Windows, Linux, macOS, and Android. For example, Linux is widely used in cybersecurity, servers, and cloud infrastructure.",
+      "related_topics": [
+        "Linux",
+        "Process Management",
+        "Memory Management",
+        "Computer Hardware"
+      ]
+    },
+    {
+      "id": 83,
+      "category": "Computer Science",
+      "keywords": [
+        "Computer Networks",
+        "networking",
+        "TCP IP",
+        "OSI model",
+        "IP address",
+        "DNS",
+        "HTTP",
+        "routers",
+        "network protocols"
+      ],
+      "question": "What are Computer Networks?",
+      "answer": "A computer network is a group of interconnected computers and devices that communicate and share information and resources. Networks use communication protocols such as TCP/IP to transfer data. Important concepts include IP addressing, routers, switches, DNS, HTTP, and network security. The OSI model explains network communication through seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application. Computer networks are essential for internet communication, cloud computing, and cybersecurity.",
+      "related_topics": [
+        "OSI Model",
+        "TCP/IP",
+        "Network Security",
+        "DNS"
+      ]
+    },
+    {
+      "id": 84,
+      "category": "Computer Science",
+      "keywords": [
+        "DSA",
+        "Data Structures and Algorithms",
+        "data structures",
+        "algorithms",
+        "arrays",
+        "linked lists",
+        "stacks",
+        "queues",
+        "trees",
+        "sorting",
+        "searching",
+        "time complexity"
+      ],
+      "question": "What are Data Structures and Algorithms?",
+      "answer": "Data Structures and Algorithms (DSA) are fundamental concepts in computer science. A data structure is a way of organizing and storing data so it can be accessed and modified efficiently. Examples include arrays, linked lists, stacks, queues, trees, graphs, and hash tables. An algorithm is a step-by-step procedure for solving a problem. Common algorithms include searching, sorting, and traversal. Time and space complexity, often expressed using Big O notation, help measure algorithm efficiency. DSA is important for programming, problem-solving, and technical interviews.",
+      "related_topics": [
+        "Python Programming",
+        "Java Programming",
+        "Algorithms",
+        "Big O Notation"
+      ]
+    },
+    {
+      "id": 85,
+      "category": "Computer Networks",
+      "question": "What is the OSI model?",
+      "keywords": [
+        "OSI model",
+        "seven layers",
+        "physical layer",
+        "data link layer",
+        "network layer",
+        "transport layer",
+        "session layer",
+        "presentation layer",
+        "application layer"
+      ],
+      "answer": "The OSI (Open Systems Interconnection) model is a networking framework that explains how data travels between devices through seven layers. The seven layers are: 1. Physical – transmits raw bits through cables and wireless signals. 2. Data Link – handles frames and MAC addresses. 3. Network – manages IP addressing and routing. 4. Transport – provides end-to-end delivery using TCP and UDP. 5. Session – manages communication sessions. 6. Presentation – handles data formatting, encryption and compression. 7. Application – provides network services to applications, such as HTTP, DNS and SMTP. Remember the order from bottom to top: Physical, Data Link, Network, Transport, Session, Presentation, Application."
+    },
+    {
+      "id": 86,
+      "category": "Data Structures",
+      "question": "What is an array?",
+      "keywords": [
+        "array",
+        "arrays",
+        "array operations",
+        "index",
+        "elements",
+        "insertion",
+        "deletion",
+        "traversal",
+        "access"
+      ],
+      "answer": "An array is a linear data structure that stores multiple elements in an ordered sequence. Elements are accessed using an index, usually starting at zero. For example, numbers = [10, 20, 30, 40]. The element at index 0 is 10. Common operations include accessing, traversing, searching, inserting and deleting elements. Arrays provide fast index-based access, but inserting or deleting elements in the middle can require shifting other elements. Arrays are useful when storing collections of similar data."
+    },
+    {
+      "id": 87,
+      "category": "Data Structures",
+      "question": "What is a linked list?",
+      "keywords": [
+        "linked list",
+        "linked lists",
+        "node",
+        "nodes",
+        "head",
+        "pointer",
+        "next pointer",
+        "singly linked list",
+        "doubly linked list",
+        "circular linked list"
+      ],
+      "answer": "A linked list is a linear data structure made up of nodes. Each node stores data and a reference to another node. The first node is called the head. In a singly linked list, each node points to the next node. In a doubly linked list, nodes point to both the previous and next nodes. In a circular linked list, the last node connects back to the first node. Linked lists support efficient insertion and deletion when the required position is known, but accessing an element requires traversing the list."
+    },
+    {
+      "id": 88,
+      "category": "Data Structures",
+      "question": "What is the difference between arrays and linked lists?",
+      "keywords": [
+        "arrays vs linked lists",
+        "array vs linked list",
+        "difference between array and linked list",
+        "comparison",
+        "memory allocation",
+        "random access",
+        "insertion",
+        "deletion"
+      ],
+      "answer": "Arrays and linked lists are both linear data structures, but they organize memory differently. Arrays generally store elements in contiguous memory locations and provide fast index-based access. Linked lists store elements in separate nodes connected using references. Arrays are usually better for frequent index-based access. Linked lists can be better for frequent insertions and deletions when the node position is known. Arrays may have a fixed size in some implementations, while linked lists can grow dynamically. Arrays have less memory overhead per element, while linked lists require extra memory for references."
+    },
+    {
+      "id": 89,
+      "category": "Python",
+      "title": "Python",
+      "question": "What is Python?",
+      "answer": "Python is a high-level, interpreted, general-purpose programming language known for its simple and readable syntax. It is used in web development, automation, artificial intelligence, machine learning, data science, and cybersecurity. Python supports multiple programming styles, including procedural and object-oriented programming. Its popular libraries include NumPy, Pandas, Flask, and Scikit-learn.",
+      "related_topics": [
+        "Programming",
+        "Automation",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Cybersecurity"
+      ]
+    },
+    {
+      "id": 90,
+      "category": "Programming",
+      "title": "Object-Oriented Programming",
+      "question": "What is Object-Oriented Programming (OOP)?",
+      "answer": "Object-Oriented Programming (OOP) is a programming approach that organizes code using classes and objects. A class is a blueprint that defines attributes and methods, while an object is an instance of a class. OOP has four main principles: Encapsulation protects data within a class, Inheritance allows one class to reuse features of another class, Polymorphism allows the same method or interface to behave differently, and Abstraction hides implementation details and exposes essential features. OOP helps make programs modular, reusable, maintainable, and easier to manage. Python, Java, and C++ support OOP.",
+      "keywords": [
+        "OOP",
+        "object oriented programming",
+        "object-oriented programming",
+        "classes",
+        "objects",
+        "encapsulation",
+        "inheritance",
+        "polymorphism",
+        "abstraction",
+        "four pillars of OOP",
+        "OOP concepts",
+        "object oriented concepts"
+      ],
+      "related_topics": [
+        "Python",
+        "Java",
+        "Programming",
+        "Classes and Objects",
+        "Software Development"
+      ]
+    },
+    {
+      "id": 91,
+      "category": "Technology",
+      "title": "Application Programming Interface (API)",
+      "question": "What is an API?",
+      "answer": "An Application Programming Interface (API) is a set of rules that allows two software applications to communicate and exchange data. For example, a React frontend can send an HTTP request to a Flask backend API to retrieve student information. REST API is a common API design style that uses HTTP methods. GET retrieves data, POST creates data, PUT updates data, and DELETE removes data. APIs commonly exchange information using JSON. An API request contains a method, endpoint, headers, and sometimes a request body. The server processes the request and returns an HTTP status code and response data.",
+      "keywords": [
+        "API",
+        "frontend communication",
+        "frontend backend communication",
+        "frontend to backend",
+        "backend communication",
+        "client server communication",
+        "how frontend connects to backend",
+        "React Flask integration",
+        "API integration",
+        "application programming interface",
+        "what is an API",
+        "REST API",
+        "RESTful API",
+        "HTTP methods",
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "API request",
+        "API response",
+        "JSON",
+        "frontend backend communication",
+        "frontend",
+        "backend",
+        "communicate",
+        "communication between frontend and backend",
+        "frontend and backend integration",
+        "connecting frontend to backend",
+        "React frontend",
+        "Flask backend",
+        "Flask API",
+        "web API"
+      ],
+      "related_topics": [
+        "Python",
+        "Flask",
+        "React",
+        "Web Development",
+        "HTTP",
+        "JSON",
+        "Backend Development"
+      ]
+    },
+    {
+      "id": 92,
+      "category": "Networking",
+      "question": "What is the difference between TCP and UDP?",
+      "keywords": [
+        "tcp vs udp",
+        "udp vs tcp",
+        "difference between tcp and udp",
+        "compare tcp and udp",
+        "tcp and udp",
+        "explain tcp and udp"
+      ],
+      "answer": "TCP (Transmission Control Protocol) is a connection-oriented transport protocol that provides reliable and ordered data delivery using acknowledgements, sequence numbers, and retransmission. UDP (User Datagram Protocol) is a connectionless transport protocol with lower overhead. It does not guarantee delivery or ordering. TCP is commonly used for web browsing, email, and file transfers, while UDP is commonly used for DNS, real-time communication, and online gaming. In simple terms, TCP prioritizes reliable delivery, while UDP prioritizes low overhead and speed.",
+      "related_topics": [
+        "Networking",
+        "TCP",
+        "UDP",
+        "Network Protocols"
       ]
     }
   ]

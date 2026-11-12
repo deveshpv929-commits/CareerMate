@@ -81,6 +81,9 @@ function App() {
 
   const [careerLoaded, setCareerLoaded] = useState(false)
 
+  // Career selected by the student for roadmap generation.
+  const [selectedCareer, setSelectedCareer] = useState('')
+
   // Saved student progress
 
     // Learning roadmap
@@ -108,6 +111,7 @@ function App() {
   const [mentorConversations, setMentorConversations] = useState([])
   const [activeConversationId, setActiveConversationId] = useState(null)
   const [conversationLoading, setConversationLoading] = useState(false)
+  const [deletingConversationId, setDeletingConversationId] = useState(null)
 
   const [mentorLoading, setMentorLoading] = useState(false)
 
@@ -476,6 +480,7 @@ async function handleLogout() {
     setCareerRecommendations([]);
     setCareerLoaded(false);
     setCareerError('');
+    setSelectedCareer('');
 
     // Clear authentication form fields and messages
     setAuthMode('login');
@@ -853,6 +858,10 @@ setStarted(true)
 
       setRoadmapTasks(data.tasks || [])
 
+      if (data.plan?.career) {
+        setSelectedCareer(data.plan.career)
+      }
+
     } catch (err) {
 
       setRoadmapError(err.message || 'Unable to load roadmap.')
@@ -863,6 +872,18 @@ setStarted(true)
 
     }
 
+  }
+
+  // Select a recommended career and open the roadmap section.
+  function chooseCareerForRoadmap(career) {
+    const careerName = career.career || career.title
+    if (!careerName) return
+
+    setSelectedCareer(careerName)
+    setLearningPlan(null)
+    setRoadmapTasks([])
+    setRoadmapError('')
+    setActiveTab('Learning Roadmap')
   }
 
   // Generate or synchronize the roadmap, then load its saved tasks.
@@ -887,7 +908,9 @@ setStarted(true)
 
         },
 
-        body: JSON.stringify({}),
+        body: JSON.stringify({
+          career: selectedCareer || learningPlan?.career || '',
+        }),
 
       })
 
@@ -1063,6 +1086,43 @@ setStarted(true)
       if (showError) setMentorError('')
     } catch (err) {
       if (showError) setMentorError(err.message || 'Unable to open this conversation.')
+    }
+  }
+
+
+  async function deleteMentorConversation(conversation) {
+    const confirmed = window.confirm(
+      `Delete "${conversation.title}"? This will permanently remove this conversation and its messages.`
+    )
+    if (!confirmed || deletingConversationId !== null) return
+
+    setMentorError('')
+    setDeletingConversationId(conversation.id)
+    try {
+      const response = await fetch(
+        `${API}/mentor/conversations/${conversation.id}`,
+        { method: 'DELETE', credentials: 'include' }
+      )
+      const data = await response.json()
+      if (!response.ok) throw new Error(data.error || 'Unable to delete this conversation.')
+
+      const remaining = mentorConversations.filter(item => item.id !== conversation.id)
+      setMentorConversations(remaining)
+
+      if (activeConversationId === conversation.id) {
+        const nextConversation = remaining[0]
+        if (nextConversation) {
+          await openMentorConversation(nextConversation.id)
+        } else {
+          setActiveConversationId(null)
+          setMentorMessages([])
+          setMentorInput('')
+        }
+      }
+    } catch (err) {
+      setMentorError(err.message || 'Unable to delete this conversation.')
+    } finally {
+      setDeletingConversationId(null)
     }
   }
 
@@ -2109,6 +2169,14 @@ if (item.name === 'Saved Learning Plans') {
 
                     )}
 
+                    <button
+                      type="button"
+                      className="primary-button"
+                      onClick={() => chooseCareerForRoadmap(career)}
+                    >
+                      Pursue This Career
+                    </button>
+
                   </article>
 
                 ))}
@@ -2614,7 +2682,9 @@ if (item.name === 'Saved Learning Plans') {
 
         ? `Your personalized learning plan for ${learningPlan.career}.`
 
-        : 'Build a personalized learning plan for your chosen career.'}
+        : selectedCareer
+          ? `Selected career: ${selectedCareer}. Generate your personalized learning plan.`
+          : 'Build a personalized learning plan for your chosen career.'}
 
     </p>
     {roadmapLoading && (
@@ -2629,6 +2699,7 @@ if (item.name === 'Saved Learning Plans') {
       <button
         className="primary-button"
         onClick={generateLearningPlan}
+        disabled={!selectedCareer}
       >
         Generate Learning Roadmap
       </button>
@@ -2790,16 +2861,42 @@ if (item.name === 'Saved Learning Plans') {
       )}
       <div className="mentor-history-list">
         {mentorConversations.map((conversation) => (
-          <button
-            type="button"
+          <div
+            className="mentor-history-row"
             key={conversation.id}
-            className={`mentor-history-item ${activeConversationId === conversation.id ? 'active' : ''}`}
-            onClick={() => openMentorConversation(conversation.id)}
-            title={conversation.title}
+            style={{ display: 'flex', alignItems: 'stretch', gap: '6px', marginBottom: '6px' }}
           >
-            <span className="mentor-history-title">{conversation.title}</span>
-            <small>{conversation.message_count ? `${conversation.message_count} message${conversation.message_count === 1 ? '' : 's'}` : 'No messages yet'}</small>
-          </button>
+            <button
+              type="button"
+              className={`mentor-history-item ${activeConversationId === conversation.id ? 'active' : ''}`}
+              onClick={() => openMentorConversation(conversation.id)}
+              title={conversation.title}
+              style={{ flex: 1, minWidth: 0, textAlign: 'left' }}
+            >
+              <span className="mentor-history-title">{conversation.title}</span>
+              <small>{conversation.message_count ? `${conversation.message_count} message${conversation.message_count === 1 ? '' : 's'}` : 'No messages yet'}</small>
+            </button>
+            <button
+              type="button"
+              onClick={() => deleteMentorConversation(conversation)}
+              disabled={deletingConversationId !== null || mentorLoading}
+              aria-label={`Delete chat: ${conversation.title}`}
+              title="Delete chat"
+              style={{
+                flex: '0 0 38px',
+                alignSelf: 'stretch',
+                border: '1px solid #e5b8b8',
+                borderRadius: '8px',
+                background: '#fff7f7',
+                color: '#b42318',
+                cursor: deletingConversationId !== null || mentorLoading ? 'not-allowed' : 'pointer',
+                opacity: deletingConversationId !== null || mentorLoading ? 0.55 : 1,
+                fontSize: '16px',
+              }}
+            >
+              {deletingConversationId === conversation.id ? '…' : '🗑'}
+            </button>
+          </div>
         ))}
       </div>
     </aside>

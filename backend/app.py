@@ -1,4 +1,3 @@
-
 from flask import Flask, jsonify, request, session
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
@@ -1643,6 +1642,60 @@ def get_mentor_conversation(conversation_id):
             connection.close()
 
 
+
+
+@app.route("/api/mentor/conversations/<int:conversation_id>", methods=["DELETE"])
+def delete_mentor_conversation(conversation_id):
+    """Delete one conversation and its messages, only for its owning student."""
+    student_id = session.get("student_id")
+    if not student_id:
+        return jsonify({"error": "Please log in to delete chat history."}), 401
+
+    connection = None
+    cursor = None
+    try:
+        connection = get_db_connection()
+        cursor = connection.cursor()
+
+        # Confirm ownership before deleting anything.
+        cursor.execute(
+            "SELECT id FROM mentor_conversations WHERE id = %s AND student_id = %s",
+            (conversation_id, student_id),
+        )
+        if not cursor.fetchone():
+            return jsonify({"error": "Conversation not found."}), 404
+
+        # Delete only this student's messages for this conversation.
+        cursor.execute(
+            "DELETE FROM chat_history WHERE conversation_id = %s AND student_id = %s",
+            (conversation_id, student_id),
+        )
+        cursor.execute(
+            "DELETE FROM mentor_conversations WHERE id = %s AND student_id = %s",
+            (conversation_id, student_id),
+        )
+        connection.commit()
+        return jsonify({
+            "message": "Conversation deleted successfully.",
+            "conversation_id": conversation_id,
+        }), 200
+
+    except mysql.connector.Error:
+        if connection is not None:
+            connection.rollback()
+        app.logger.exception(
+            "Unable to delete mentor conversation %s for student_id=%s",
+            conversation_id,
+            student_id,
+        )
+        return jsonify({"error": "Unable to delete this conversation."}), 500
+    finally:
+        if cursor is not None:
+            cursor.close()
+        if connection is not None and connection.is_connected():
+            connection.close()
+
+
 @app.route("/api/mentor/chat", methods=["POST"])
 def mentor_chat():
     """Answer the authenticated student's question using saved CareerMate data."""
@@ -1755,6 +1808,64 @@ def mentor_chat():
     }
 
     # Retrieval-first hybrid answer. Gemini is no longer required.
+    
+    # Retrieve recent conversation history for contextual follow-up questions.
+    conversation_history = []
+    conversation_id = data.get("conversation_id")
+
+    if conversation_id is not None:
+        try:
+            conversation_id = int(conversation_id)
+        except (TypeError, ValueError):
+            return jsonify({"error": "Invalid conversation."}), 400
+
+        history_connection = None
+        history_cursor = None
+
+        try:
+            history_connection = get_db_connection()
+            history_cursor = history_connection.cursor(dictionary=True)
+
+            # Verify that this conversation belongs to the logged-in student.
+            history_cursor.execute(
+                """
+                SELECT id
+                FROM mentor_conversations
+                WHERE id = %s AND student_id = %s
+                """,
+                (conversation_id, student_id),
+            )
+
+            if not history_cursor.fetchone():
+                return jsonify({"error": "Conversation not found."}), 404
+
+            # Retrieve the six most recent exchanges.
+            history_cursor.execute(
+                """
+                SELECT user_message, assistant_message
+                FROM chat_history
+                WHERE student_id = %s AND conversation_id = %s
+                ORDER BY id DESC
+                LIMIT 6
+                """,
+                (student_id, conversation_id),
+            )
+
+            conversation_history = list(reversed(history_cursor.fetchall()))
+
+        except mysql.connector.Error:
+            app.logger.exception(
+                "Unable to retrieve mentor conversation history."
+            )
+
+        finally:
+            if history_cursor is not None:
+                history_cursor.close()
+
+            if history_connection is not None and history_connection.is_connected():
+                history_connection.close()
+
+    context_for_prompt["conversation_history"] = conversation_history
     try:
         context_for_prompt["student_id"] = student_id
         answer, mentor_mode, retrieval_confidence, cache_hit = generate_hybrid_answer(
@@ -1912,4 +2023,8 @@ def get_latest_mentor_plan():
 if __name__ == "__main__":
     debug_mode = os.getenv("FLASK_DEBUG", "False").lower() == "true"
     app.run(debug=debug_mode, port=5000)
+
+
+
+
 
